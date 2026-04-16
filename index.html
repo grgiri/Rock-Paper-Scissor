@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let humanScore = 0;
+        let computerScore = 0;
+        let round = 0;
+
+        function getComputerChoice(){
+            let choice = Math.floor(Math.random() * 3);
+            if (choice == 0) {
+                return 'rock'
+            } else if (choice == 1) {
+                return 'paper'
+            }else {
+                return 'scissor'
+            }
+        }
+
+        function getHumanChoice() {
+            let humanChoice = window.prompt("Play your turn!!!").toLowerCase();
+            return humanChoice;
+        }
+
+        function playRound(humanChoice, computerChoice) {
+            if(humanChoice == 'rock') {
+                if(computerChoice == 'rock') {
+                    return 'Game is Tied! both played Rock';
+
+                } else if (computerChoice == 'paper') {
+                    computerScore += 1;
+                    return 'You Lose! Paper beats Rock';
+                } else {
+                    humanScore += 1;
+                    return 'You Win! Rock beats Scissor';
+                }
+            } else if (humanChoice == 'scissor') {
+                if (computerChoice == 'paper') {
+                    humanScore += 1;
+                    return 'You Win! Scissor beats Paper';
+                } else if (computerChoice == 'rock') {
+                    computerScore += 1;
+                    return 'You Lose!, Rock beats Scissor';
+                } else {
+                    return 'Game Tied!';
+                }
+            } else {
+                if (computerChoice == 'rock' ) {
+                    humanScore += 1;
+                    return 'You Win!, Paper beats Rock';
+                } else if (computerChoice == 'scissor'){
+                    computerScore += 1;
+                    return 'You Lose! Scissor beats Paper';
+                } else {
+                    return 'Game Tied!';
+                }
+            }
+
+        }
+
+        function playGame() {
+
+            if (round === 5) {
+
+                console.log("Game Over")
+                if(humanScore > computerScore) {
+                    console.log("You won the Game!!!")
+                } else if (computerScore > humanScore) {
+                    console.log("You Lost the Game!!!")
+                } else {
+                    console.log("It's a tie!!!!")
+                }
+                return;                
+
+            } else {
+                
+                console.log("Round: ", round);
+                const humanSelection = getHumanChoice();
+                const computerSelection = getComputerChoice();
+                console.log(playRound(humanSelection, computerSelection));                
+                console.log("human: ", humanSelection, "computer: ", computerSelection);
+                console.log("Scores => Human:", humanScore, "Computer:", computerScore);
+
+            }   
+
+            round ++;
+            
+            playGame();
+
+
+        }  
+        
+        console.log(playGame());
+
+
+
+    </script>
+</body>
+</html>
