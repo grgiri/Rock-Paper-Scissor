@@ -1,0 +1,25 @@
+.container {
+    width: 80%;    
+    background-color: gray;    
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.player-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  
+    flex-wrap: wrap;  
+}
+
+.results {
+    text-align: center;
+    color: green;
+}
