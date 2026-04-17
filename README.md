@@ -1,110 +1,85 @@
-# 🪨 Rock Paper Scissors (JavaScript)
+# 🪨 Rock Paper Scissors
 
-## 📌 Project Overview
-
-This project is a simple **Rock-Paper-Scissors game** built using JavaScript.
-The game is played between a human user and the computer for **5 rounds**, with scores tracked and a final winner declared.
+A simple and interactive **Rock-Paper-Scissors game** built using **HTML, CSS, and JavaScript**.
+This project demonstrates DOM manipulation, event handling, and basic game logic.
 
 ---
 
-## 🎯 Features
+## 🚀 Features
 
-* User input via browser prompt
-* Random computer choice generation
-* Round-by-round gameplay
-* Score tracking (Human vs Computer)
-* Final winner announcement after 5 rounds
-* Case-insensitive input handling
-* Recursive game loop (no traditional loops used)
-
----
-
-## 🧠 Concepts Used
-
-* Functions
-* Conditional statements
-* Recursion (instead of loops)
-* Global state management
-* String manipulation (`toLowerCase()`)
+* 🎮 Play against the computer
+* 🧠 Random computer choice generation
+* 📊 Live score tracking (Player vs Computer)
+* ⚡ Instant result display after each round
+* 🖱️ Interactive UI with buttons
+* 🔁 Multiple rounds gameplay
 
 ---
 
-## 🕹️ How the Game Works
+## 🛠️ Tech Stack
 
-1. The user is prompted to enter:
-
-   * `rock`, `paper`, or `scissor`
-2. The computer randomly selects one of the three options.
-3. A round is played:
-
-   * Winner is decided based on rules
-   * Scores are updated
-4. Steps repeat until **5 rounds are completed**
-5. Final winner is displayed in the console
+* **HTML** – Structure of the game
+* **CSS** – Styling and layout
+* **JavaScript** – Game logic and interactivity
 
 ---
 
-## ⚙️ Functions Breakdown
+## 📂 Project Structure
 
-### `getComputerChoice()`
-
-* Generates a random choice:
-
-  * rock / paper / scissor
-
-### `getHumanChoice()`
-
-* Takes user input using `prompt()`
-* Converts input to lowercase for consistency
-
-### `playRound(humanChoice, computerChoice)`
-
-* Determines winner of a single round
-* Updates scores
-* Returns result message
-
-### `playGame()`
-
-* Controls the game flow using recursion
-* Runs exactly 5 rounds
-* Displays final result
+```
+Rock-Paper-Scissors/
+│
+├── index.html    # Main HTML file
+├── style.css     # Styling
+├── play.js       # Game logic
+└── README.md     # Project documentation
+```
 
 ---
 
 ## ▶️ How to Run
 
-1. Open your browser
-2. Open Developer Console (F12)
-3. Paste the script or run it from your HTML file
-4. Call:
+1. Clone the repository:
 
-```js
-playGame();
-```
+   ```bash
+   git clone https://github.com/your-username/Rock-Paper-Scissors.git
+   ```
 
----
+2. Navigate to the project folder:
 
-## 📊 Example Output
+   ```bash
+   cd Rock-Paper-Scissors
+   ```
 
-```
-Round: 1
-You Win! Rock beats Scissor
-Scores => Human: 1 Computer: 0
-
-Round: 2
-You Lose! Paper beats Rock
-Scores => Human: 1 Computer: 1
-
-...
-
-Game Over
-You won the Game!!!
-```
+3. Open `index.html` in your browser.
 
 ---
 
-## 🏁 Conclusion
+## 🎯 Game Rules
 
-This project demonstrates core JavaScript fundamentals .
+* Rock beats Scissors
+* Scissors beats Paper
+* Paper beats Rock
+
+---
+
+## 🧠 Learning Outcomes
+
+* DOM manipulation
+* Event listeners
+* Conditional logic in JavaScript
+* Structuring small frontend projects
+
+---
+
+## 🤝 Acknowledgment
+
+This project is part of **The Odin Project** curriculum.
+
+---
+
+## 📌 Author
+
+**Giri G R**
 
 ---
